@@ -82,7 +82,7 @@ Follow these steps to set up and run the project:
 
 ### Clone or Download the Repository
 ```bash
-git clone https://github.com/kharniwal-harsh/attendance-system-demo
+git clone https://github.com/gauravsharma5166/Advanced-attendance-system-using-FR
 ```
 
 ### Set Up the Database
@@ -107,26 +107,26 @@ http://localhost/{your-project-folder-name}
 ## User Guide
 
 ### 1. Login as Administrator
-- **Email:** admin@gmail.com
-- **Password:** @admin_
+- **Email:** admin
+- **Password:** admin123
 
 Once logged in, you can:
 - Add students
-- Manage courses, units, and venues
+- Manage classes.
 
 ⚠️ **Important:**
-- Ensure to add at least two students and capture five clear images for each.
+- Ensure to add at least two students.
 - Poor image quality will affect recognition accuracy. You can retake any image by clicking on it.
 
 ### 2. Login as Lecturer
 - Create a lecturer account via the admin panel or use a pre-existing one.
 - Select lecture user type to be able to login as lecturer.
 
-- **Email:** mark@gmail.com
-- **Password:** @mark_
+- **Email:** admin
+- **Password:** admin123
 
 As a lecturer:
-- Select a course, unit, and venue on the home page.
+- Select a course on the home page.
 - Launch the Face Recognition feature to begin attendance.
 
 ### Additional Features for the Lecturer Panel
