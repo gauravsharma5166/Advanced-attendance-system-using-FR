@@ -153,7 +153,7 @@ def load_user(user_id):
 # Routes
 @app.route("/")
 def home():
-    return redirect("/login")
+    return render_template("landing.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():

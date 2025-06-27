@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Attendance System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #2563eb 0%, #1e40af 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-landing {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            background: rgba(255,255,255,0.07);
+            border-radius: 32px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+            padding: 60px 50px 60px 80px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .left {
+            max-width: 420px;
+        }
+        .left h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+        .left p {
+            font-size: 1.18rem;
+            color: #e0e7ef;
+            margin-bottom: 38px;
+        }
+        .buttons {
+            display: flex;
+            gap: 18px;
+        }
+        .button {
+            text-decoration: none;
+            padding: 13px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+            background: #fff;
+            color: #2563eb;
+        }
+        .button:hover {
+            background: #2563eb;
+            color: #fff;
+        }
+        .button.secondary {
+            background: #facc15;
+            color: #1e293b;
+        }
+        .button.secondary:hover {
+            background: #fde047;
+            color: #1e293b;
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .right img {
+            width: 180px;
+            height: 180px;
+            filter: drop-shadow(0 4px 24px rgba(0,0,0,0.10));
+        }
+        @media (max-width: 900px) {
+            .content {
+                flex-direction: column;
+                padding: 40px 20px;
+                gap: 30px;
+            }
+            .main-landing {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-landing">
+        <div class="content">
+            <div class="left">
+                <h1>Advanced Attendance System</h1>
+                <p>A modern face recognition-based attendance management system that makes tracking attendance effortless and accurate.</p>
+                <div class="buttons">
+                    <a href="/login" class="button">Sign In</a>
+                    <a href="/register" class="button secondary">Register</a>
+                </div>
+            </div>
+            <div class="right">
+                <img src="{{ url_for('static', filename='img/face_icon.svg') }}" alt="Face Recognition Icon">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
