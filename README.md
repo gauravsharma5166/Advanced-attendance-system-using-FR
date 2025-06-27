@@ -1,99 +1,138 @@
 # Advanced Attendance System
 
-## Overview
-The Advanced Attendance System is a modern face recognition-based attendance management system designed to simplify and enhance attendance tracking for educational institutions. It leverages Flask for the backend, MongoDB for data storage, and face recognition technology for identifying students.
+## View Live Demo
+
+A modern face recognition-based attendance management system for educational institutions. This project is ideal for college projects and demonstrates role-based access, intuitive management, and accurate identification using multiple images.
+
+---
+
+## Project Screenshots
+Below are screenshots of the main features and pages of the project:
+
+### Landing Page
+The welcoming landing page introduces the system and its features.
+
+### Login Page
+Secure login for administrators and lecturers.
+
+### Dashboard Page
+Overview of attendance statistics and quick access to management features.
+
+### Profile Page
+User profile management for updating personal details and password.
+
+### Create Class Page
+Interface for administrators to create and manage classes.
+
+### Register Student Page
+Add new students and capture multiple images for face recognition.
+
+### View Students Page
+List and manage all registered students in the system.
+
+### Manual Attendance Page
+Mark attendance manually for students in a class.
+
+### Image-based Attendance Page
+Mark attendance by uploading or capturing student images.
+
+### Webcam Attendance Page
+Take attendance using live webcam face recognition.
+
+### View Attendance Page
+View and export attendance records for analysis.
+
+---
 
 ## Features
-- **Face Recognition Attendance**: Mark attendance using face recognition technology.
-- **Manual Attendance**: Option to mark attendance manually.
-- **Live Webcam Attendance**: Real-time attendance marking using a webcam.
-- **Student Management**: Add, view, and delete students.
-- **Class Management**: Manage classes and their associated students.
-- **Attendance Reports**: View detailed attendance records and export them to Excel.
-- **Dark Mode**: Toggle between light and dark themes.
+- Role-based access for administrators and lecturers.
+- Manage classes, add students, view attendance records through an intuitive interface.
+- Capture and store multiple images for accurate identification.
+- Export attendance records to Excel.
+- User-friendly dashboard for both admin and lecturer roles.
+- Great for college projects and demonstrations.
+
+---
 
 ## Project Structure
 ```
-├── app.py                 # Main Flask application
-├── database.py            # MongoDB connection logic
-├── encode_faces.py        # Face encoding logic
-├── init_db.py             # Database initialization
-├── migrate_data.py        # Data migration script
-├── test_mongo_connection.py # MongoDB connection testing
-├── requirements.txt       # Project dependencies
-├── Procfile               # Deployment configuration for Heroku
-├── gunicorn.conf.py       # Gunicorn configuration
-├── static/                # Static files
-│   ├── attendance_sheets/ # Excel attendance sheets
-│   ├── class_photos/      # Class photos
-│   ├── img/               # Icons and images
-│   └── student_photos/    # Student photos
-├── templates/             # HTML templates
-│   ├── base.html          # Base template
-│   ├── landing.html       # Landing page
-│   ├── login.html         # Login page
-│   ├── register.html      # Registration page
-│   ├── dashboard.html     # Dashboard
-│   ├── view_students.html # View students
-│   ├── view_attendance.html # View attendance
-│   ├── mark_attendance_image.html # Mark attendance using images
-│   ├── mark_attendance_manual.html # Mark attendance manually
-│   ├── live_attendance.html # Live webcam attendance
-│   └── manage_classes.html # Manage classes
-└── README.md              # Project documentation
+├── app.py
+├── database.py
+├── encode_faces.py
+├── init_db.py
+├── migrate_data.py
+├── requirements.txt
+├── static/
+│   ├── attendance_sheets/
+│   ├── class_photos/
+│   ├── img/
+│   └── student_photos/
+├── templates/
+│   ├── base.html
+│   ├── dashboard.html
+│   ├── landing.html
+│   └── ...
+└── ...
 ```
 
-## Installation
+---
 
-### Prerequisites
-- Python 3.8 or higher
-- MongoDB (local or Atlas)
+## Setup Procedure
+Follow these steps to set up and run the project:
 
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd Advanced-Attendance-System
-   ```
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Set up environment variables:
-   - Create a `.env` file in the root directory.
-   - Add the following:
-     ```env
-     MONGO_URI=<your-mongodb-uri>
-     ```
-5. Initialize the database:
-   ```bash
-   python init_db.py
-   ```
-6. Run the application:
-   ```bash
-   python app.py
-   ```
+### Clone or Download the Repository
+```bash
+git clone https://github.com/kharniwal-harsh/attendance-system-demo
+```
 
-## Deployment
-The project is configured for deployment on Heroku. Use the `Procfile` and `gunicorn.conf.py` for deployment.
+### Set Up the Database
+Run the database initialization script:
+```bash
+python init_db.py
+```
 
-## License
-This project is licensed under the MIT License.
+### Launch the Application
+Start the Flask app:
+```bash
+python app.py
+```
 
-## Contributors
-- Your Name
-- Additional Contributors
-
-## Acknowledgments
-- Flask
-- MongoDB
-- Face Recognition Library
-- Bootstrap
-- Font Awesome
+Visit the application in your browser:
+```
+http://localhost/{your-project-folder-name}
+```
 
 ---
+
+## User Guide
+
+### 1. Login as Administrator
+- **Email:** admin@gmail.com
+- **Password:** @admin_
+
+Once logged in, you can:
+- Add students
+- Manage courses, units, and venues
+
+⚠️ **Important:**
+- Ensure to add at least two students and capture five clear images for each.
+- Poor image quality will affect recognition accuracy. You can retake any image by clicking on it.
+
+### 2. Login as Lecturer
+- Create a lecturer account via the admin panel or use a pre-existing one.
+- Select lecture user type to be able to login as lecturer.
+
+- **Email:** mark@gmail.com
+- **Password:** @mark_
+
+As a lecturer:
+- Select a course, unit, and venue on the home page.
+- Launch the Face Recognition feature to begin attendance.
+
+### Additional Features for the Lecturer Panel
+- Export the attendance to an Excel sheet.
+- Other simple features are available for managing the lecture panel.
+
+---
+
+For any issues or contributions, please open an issue or pull request on the GitHub repository.
